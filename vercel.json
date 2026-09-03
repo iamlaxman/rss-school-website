@@ -32,6 +32,10 @@
         {
           "key": "Permissions-Policy",
           "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com https://www.gstatic.com https://*.firebaseio.com https://*.firebaseapp.com https://*.googleapis.com https://nepalidatepicker.sajanmaharjan.com.np https://api.imgbb.com https://images.unsplash.com https://media.licdn.com https://scontent.fbir1-1.fna.fbcdn.net https://images.prismic.io https://www.google.com; img-src 'self' data: blob: https: http:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://www.gstatic.com https://nepalidatepicker.sajanmaharjan.com.np; connect-src 'self' https://*.firebaseio.com https://*.firebaseapp.com https://*.googleapis.com https://api.imgbb.com https://nepalidatepicker.sajanmaharjan.com.np; frame-src https://www.google.com https://www.youtube.com;"
         }
       ]
     },
@@ -63,6 +67,15 @@
       ]
     },
     {
+      "source": "/uploads/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
       "source": "/(.*).(css|js|png|jpg|jpeg|gif|svg|ico|webp|woff|woff2|ttf|eot)",
       "headers": [
         {
@@ -81,35 +94,43 @@
       ]
     },
     {
-      "source": "/api/:path*",
+      "source": "/sitemap.xml",
       "headers": [
         {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        },
-        {
-          "key": "Access-Control-Allow-Methods",
-          "value": "GET, POST, PUT, DELETE, OPTIONS"
-        },
-        {
-          "key": "Access-Control-Allow-Headers",
-          "value": "Content-Type, Authorization, X-Requested-With"
+          "key": "Content-Type",
+          "value": "application/xml"
         },
         {
           "key": "Cache-Control",
-          "value": "no-store, no-cache, must-revalidate, proxy-revalidate"
+          "value": "public, max-age=3600"
         }
       ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/admin/:path*",
-      "destination": "/admin/:path*"
     },
     {
-      "source": "/api/:path*",
-      "destination": "/api/:path*"
+      "source": "/robots.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    },
+    {
+      "source": "/favicon/site.webmanifest",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/manifest+json"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
     }
   ],
   "redirects": [
@@ -139,31 +160,38 @@
       "permanent": true
     },
     {
-      "source": "/gallery.html/:path*",
-      "destination": "/gallery.html",
+      "source": "/admissions",
+      "destination": "/admission-close.html",
+      "permanent": true
+    },
+    {
+      "source": "/admission",
+      "destination": "/admission-close.html",
       "permanent": true
     },
     {
       "source": "/notices.html/:path*",
       "destination": "/notices.html",
       "permanent": true
+    },
+    {
+      "source": "/gallery.html/:path*",
+      "destination": "/gallery.html",
+      "permanent": true
     }
   ],
-  "rewrites": [],
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
+    }
+  ],
   "functions": {
     "api/*.js": {
       "maxDuration": 10
     }
   },
-  "regions": ["sin1", "bom1", "cdg1", "iad1"],
   "env": {
-    "FIREBASE_API_KEY": "AIzaSyC7yFOjTI28Jx6V1w9TRt-hLRseHa_FI9A",
-    "FIREBASE_AUTH_DOMAIN": "web-rtc-47862.firebaseapp.com",
-    "FIREBASE_DATABASE_URL": "https://web-rtc-47862-default-rtdb.firebaseio.com",
-    "FIREBASE_PROJECT_ID": "web-rtc-47862",
-    "FIREBASE_STORAGE_BUCKET": "web-rtc-47862.firebasestorage.app",
-    "FIREBASE_MESSAGING_SENDER_ID": "503656932420",
-    "FIREBASE_APP_ID": "1:503656932420:web:e102f05d9cf4d7e4e1c811",
     "SITE_URL": "https://rastranirman.vercel.app",
     "SITE_NAME": "Rastranirman Secondary School",
     "CONTACT_EMAIL": "rastranirmanschool@gmail.com",
