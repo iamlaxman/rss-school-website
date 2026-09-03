@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Access Denied | Rastranirman Secondary School</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Rastranirman" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
+  <meta name="theme-color" content="#DC2626" />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0E8B4B',
+            secondary: '#1F3C88',
+            accent: '#FFD400',
+            dark: '#1E293B',
+            light: '#F8FAFC',
+            danger: '#DC2626',
+          },
+          fontFamily: {
+            'heading': ['Poppins', 'sans-serif'],
+            'body': ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    html, body {
+      height: 100%;
+      width: 100%;
+      overflow-x: hidden;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+    
+    body { 
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #fef2f2 0%, #fff5f5 30%, #f0f9ff 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow-y: auto;
+    }
+    
+    /* Decorative background elements */
+    .bg-pattern {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    
+    .bg-pattern::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 20% 30%, rgba(220, 38, 38, 0.05) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 70%, rgba(14, 139, 75, 0.05) 0%, transparent 50%);
+      animation: bgShift 20s infinite ease-in-out;
+    }
+    
+    @keyframes bgShift {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(50px, -30px); }
+    }
+    
+    .content-wrapper {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: 600px;
+      padding: 20px;
+      text-align: center;
+      animation: slideUp 0.6s ease-out;
+    }
+    
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .lock-wrapper {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 30px;
+      animation: floatLock 3s infinite ease-in-out;
+    }
+    
+    @keyframes floatLock {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+    
+    .lock-circle {
+      width: 120px;
+      height: 120px;
+      background: rgba(220, 38, 38, 0.1);
+      border: 3px solid rgba(220, 38, 38, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      animation: pulseRing 2s infinite ease-in-out;
+    }
+    
+    @keyframes pulseRing {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.3); }
+      50% { box-shadow: 0 0 0 20px rgba(220, 38, 38, 0); }
+    }
+    
+    .lock-circle i {
+      font-size: 48px;
+      color: #DC2626;
+      animation: lockShake 3s infinite ease-in-out;
+    }
+    
+    @keyframes lockShake {
+      0%, 90%, 100% { transform: rotate(0deg); }
+      92% { transform: rotate(-10deg); }
+      94% { transform: rotate(10deg); }
+      96% { transform: rotate(-5deg); }
+      98% { transform: rotate(5deg); }
+    }
+    
+    .error-code {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(4rem, 10vw, 8rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, #DC2626 0%, #991B1B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 10px;
+      animation: fadeInScale 0.8s ease-out;
+    }
+    
+    @keyframes fadeInScale {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 32px;
+      background: linear-gradient(135deg, #0E8B4B 0%, #0a6e3a 100%);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(14, 139, 75, 0.3);
+    }
+    
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 32px;
+      background: transparent;
+      color: #1E293B;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 2px solid #CBD5E0;
+      cursor: pointer;
+    }
+    
+    .btn-outline:hover {
+      border-color: #0E8B4B;
+      color: #0E8B4B;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .info-row {
+      animation: fadeIn 0.8s ease-out 0.6s both;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @media (max-width: 640px) {
+      .lock-wrapper {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+      }
+      
+      .lock-circle {
+        width: 80px;
+        height: 80px;
+      }
+      
+      .lock-circle i {
+        font-size: 32px;
+      }
+      
+      .btn-primary, .btn-outline {
+        padding: 12px 24px;
+        font-size: 0.85rem;
+      }
+    }
+    
+    @media (max-width: 380px) {
+      .content-wrapper {
+        padding: 16px;
+      }
+      
+      .btn-primary, .btn-outline {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Decorative Background -->
+  <div class="bg-pattern"></div>
+
+  <!-- Main Content -->
+  <div class="content-wrapper">
+    
+    <!-- Lock Icon -->
+    <div class="lock-wrapper">
+      <div class="lock-circle">
+        <i class="fas fa-lock"></i>
+      </div>
+    </div>
+    
+    <!-- Error Code -->
+    <div class="error-code">403</div>
+    
+    <!-- Heading -->
+    <h1 class="font-heading font-extrabold text-2xl md:text-4xl text-dark mb-3">Access Denied</h1>
+    
+    <!-- Description -->
+    <p class="text-dark/60 text-sm md:text-base leading-relaxed mb-6 max-w-md mx-auto">
+      You do not have permission to access this area. This section is restricted to authorized administrators only.
+    </p>
+    
+    <!-- Info Banner -->
+    <div class="info-row bg-amber-50/80 border border-amber-200 rounded-2xl p-4 mb-6 max-w-md mx-auto backdrop-blur-sm">
+      <div class="flex items-start gap-3 text-left">
+        <i class="fas fa-shield-alt text-amber-600 mt-0.5 text-lg"></i>
+        <div>
+          <p class="text-sm font-semibold text-amber-800 mb-1">Why am I seeing this?</p>
+          <p class="text-xs text-amber-700 leading-relaxed">
+            This page is protected and can only be accessed by authorized school administrators. If you believe this is an error, please contact the school administration.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Buttons -->
+    <div class="info-row flex flex-col sm:flex-row gap-3 justify-center mb-8">
+      <a href="/admin/login.html" class="btn-primary">
+        <i class="fas fa-sign-in-alt"></i> Go to Login
+      </a>
+      <a href="/" class="btn-outline">
+        <i class="fas fa-home"></i> Back to Home
+      </a>
+    </div>
+    
+    <!-- Contact Info -->
+    <div class="info-row flex flex-col sm:flex-row items-center justify-center gap-3 text-xs text-dark/50 mb-6">
+      <span class="flex items-center gap-1.5">
+        <i class="fas fa-phone text-primary"></i> +977 980-2718899
+      </span>
+      <span class="hidden sm:inline text-dark/30">|</span>
+      <span class="flex items-center gap-1.5">
+        <i class="fas fa-envelope text-primary"></i> rastranirmanschool@gmail.com
+      </span>
+    </div>
+    
+    <!-- Footer -->
+    <p class="info-row text-xs text-dark/30">
+      © <span id="year"></span> Rastranirman Secondary School. All rights reserved.
+    </p>
+  </div>
+
+  <script>
+    // Dynamic copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

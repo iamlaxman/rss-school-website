@@ -1,0 +1,173 @@
+{
+  "version": 2,
+  "name": "rastranirman-secondary-school",
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "github": {
+    "silent": true,
+    "autoJobCancelation": true
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+        }
+      ]
+    },
+    {
+      "source": "/favicon/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assets/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/images/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).(css|js|png|jpg|jpeg|gif|svg|ico|webp|woff|woff2|ttf|eot)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000, s-maxage=86400"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).(html|htm)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/api/:path*",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, PUT, DELETE, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Authorization, X-Requested-With"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-store, no-cache, must-revalidate, proxy-revalidate"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/admin/:path*",
+      "destination": "/admin/:path*"
+    },
+    {
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us.html",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/gallery.html/:path*",
+      "destination": "/gallery.html",
+      "permanent": true
+    },
+    {
+      "source": "/notices.html/:path*",
+      "destination": "/notices.html",
+      "permanent": true
+    }
+  ],
+  "rewrites": [],
+  "functions": {
+    "api/*.js": {
+      "maxDuration": 10
+    }
+  },
+  "regions": ["sin1", "bom1", "cdg1", "iad1"],
+  "env": {
+    "FIREBASE_API_KEY": "AIzaSyC7yFOjTI28Jx6V1w9TRt-hLRseHa_FI9A",
+    "FIREBASE_AUTH_DOMAIN": "web-rtc-47862.firebaseapp.com",
+    "FIREBASE_DATABASE_URL": "https://web-rtc-47862-default-rtdb.firebaseio.com",
+    "FIREBASE_PROJECT_ID": "web-rtc-47862",
+    "FIREBASE_STORAGE_BUCKET": "web-rtc-47862.firebasestorage.app",
+    "FIREBASE_MESSAGING_SENDER_ID": "503656932420",
+    "FIREBASE_APP_ID": "1:503656932420:web:e102f05d9cf4d7e4e1c811",
+    "SITE_URL": "https://rastranirman.vercel.app",
+    "SITE_NAME": "Rastranirman Secondary School",
+    "CONTACT_EMAIL": "rastranirmanschool@gmail.com",
+    "CONTACT_PHONE": "+9779802718899",
+    "WHATSAPP_NUMBER": "+9779802700901"
+  }
+}

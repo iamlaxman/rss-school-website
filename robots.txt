@@ -1,0 +1,112 @@
+# Rastranirman Secondary School - robots.txt
+# https://rastranirman.edu.np/
+
+# Allow all search engines
+User-agent: *
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /admin/*
+Disallow: /api/
+Disallow: /api/*
+Disallow: /dashboard/
+Disallow: /dashboard/*
+Disallow: /includes/
+Disallow: /includes/*
+Disallow: /config/
+Disallow: /config/*
+Disallow: /vendor/
+Disallow: /vendor/*
+Disallow: /node_modules/
+Disallow: /node_modules/*
+Disallow: /private/
+Disallow: /private/*
+Disallow: /tmp/
+Disallow: /tmp/*
+Disallow: /logs/
+Disallow: /logs/*
+Disallow: /backup/
+Disallow: /backup/*
+
+# Disallow specific file types
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.log$
+Disallow: /*.env$
+Disallow: /*.env.*
+Disallow: /*.git$
+Disallow: /*.git/
+Disallow: /*.sql$
+Disallow: /*.db$
+Disallow: /*.db.*
+Disallow: /*.md$
+Disallow: /*.lock$
+Disallow: /*.sh$
+Disallow: /*.bat$
+Disallow: /*.cmd$
+Disallow: /*.zip$
+Disallow: /*.tar$
+Disallow: /*.gz$
+Disallow: /*.rar$
+Disallow: /*.7z$
+
+# Disallow common sensitive files
+Disallow: /.htaccess
+Disallow: /.htpasswd
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-includes/
+
+# Disallow search pages (if any)
+Disallow: /search
+Disallow: /search/
+Disallow: /*?s=
+Disallow: /*?q=
+Disallow: /*?search=
+Disallow: /*?query=
+
+# Disallow print versions
+Disallow: /*?print=
+Disallow: /*?output=pdf
+
+# Disallow tracking parameters
+Disallow: /*?utm_source=
+Disallow: /*?utm_medium=
+Disallow: /*?utm_campaign=
+Disallow: /*?utm_term=
+Disallow: /*?utm_content=
+Disallow: /*?fbclid=
+Disallow: /*?gclid=
+Disallow: /*?ref=
+
+# Allow specific sections
+Allow: /$
+Allow: /about.html
+Allow: /admission-close.html
+Allow: /school-admission.html
+Allow: /grade11-admission.html
+Allow: /notices.html
+Allow: /gallery.html
+Allow: /contact.html
+Allow: /favicon/
+Allow: /favicon/*
+Allow: /assets/
+Allow: /assets/*
+Allow: /images/
+Allow: /images/*
+Allow: /css/
+Allow: /css/*
+Allow: /js/
+Allow: /js/*
+Allow: /fonts/
+Allow: /fonts/*
+
+# Crawl delay (optional - be nice to servers)
+# Crawl-delay: 5
+
+# Sitemap location
+Sitemap: https://rastranirman.edu.np/sitemap.xml
+
+# Additional sitemaps (if any)
+# Sitemap: https://rastranirman.edu.np/sitemap-images.xml
+# Sitemap: https://rastranirman.edu.np/sitemap-notices.xml

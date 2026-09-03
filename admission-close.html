@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <title>Admissions Closed | Rastranirman Secondary School</title>
+    
+    <meta name="description" content="Admissions are currently closed at Rastranirman Secondary School. Contact us for future admission inquiries." />
+    <meta name="keywords" content="admission closed, school admission Nepal, future admissions, Rastranirman school contact" />
+    <meta name="robots" content="index, follow" />
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Admissions Closed | Rastranirman Secondary School" />
+    <meta property="og:description" content="Admissions are currently closed. Contact us for future admission inquiries." />
+    
+    <meta name="theme-color" content="#0E8B4B" />
+    
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#0E8B4B", secondary: "#1F3C88", accent: "#FFD400", dark: "#1E293B", light: "#F8FAFC" },
+            fontFamily: { heading: ["Poppins", "sans-serif"], body: ["Inter", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font-family: "Inter", sans-serif; background: #F8FAFC; color: #1E293B; overflow-x: hidden; }
+      .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+      @media (min-width: 768px) { .container { padding: 0 32px; } }
+      section { padding: 80px 0; }
+      @media (min-width: 768px) { section { padding: 100px 0; } }
+      
+      .btn { display: inline-flex; align-items: center; justify-content: center; font-family: "Poppins", sans-serif; font-weight: 600; padding: 15px 30px; border-radius: 50px; text-decoration: none; transition: all 0.35s cubic-bezier(0.4,0,0.2,1); font-size: 0.9rem; cursor: pointer; border: none; gap: 10px; white-space: nowrap; }
+      .btn-primary { background: #0e8b4b; color: #fff; }
+      .btn-primary:hover { background: #0a6e3a; transform: translateY(-3px); box-shadow: 0 12px 30px rgba(14, 139, 75, 0.25); }
+      .btn-white { background: #fff; color: #0e8b4b; }
+      .btn-white:hover { background: #f0fdf4; transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,0.1); }
+      .btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.6); }
+      .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: #fff; transform: translateY(-3px); }
+      .btn-blue { background: #1F3C88; color: #fff; }
+      .btn-blue:hover { background: #162d6b; transform: translateY(-3px); box-shadow: 0 12px 30px rgba(31, 60, 136, 0.25); }
+      
+      .fade-in { opacity: 0; transform: translateY(25px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+      .fade-in.visible { opacity: 1; transform: translateY(0); }
+      
+      .action-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+      .action-buttons .btn { min-width: 180px; }
+      @media (max-width: 640px) {
+        .action-buttons { flex-direction: column; align-items: center; gap: 12px; }
+        .action-buttons .btn { width: 100%; max-width: 320px; }
+      }
+      
+      .section-divider { width: 60px; height: 3px; background: #0e8b4b; border-radius: 3px; margin: 0 auto; }
+      .status-pulse { animation: pulseRing 2s ease-in-out infinite; }
+      @keyframes pulseRing {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.3); }
+        50% { box-shadow: 0 0 0 15px rgba(220, 38, 38, 0); }
+      }
+      
+      .card-hover { transition: all 0.3s ease; }
+      .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.06); }
+    </style>
+  </head>
+  <body>
+
+    <!-- Loader -->
+    <div id="loader" class="fixed inset-0 bg-white flex items-center justify-center z-[9999] transition-opacity duration-500">
+      <img src="/favicon/favicon-96x96.png" alt="Logo" class="w-16 h-16 animate-pulse">
+    </div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 h-16 md:h-20">
+      <div class="container h-full flex items-center justify-between">
+        <a href="/" class="flex items-center gap-2.5 no-underline">
+          <img src="/favicon/favicon-96x96.png" alt="Logo" class="w-8 h-8 object-contain">
+          <span class="font-heading font-bold text-sm md:text-lg text-dark">Rastranirman</span>
+        </a>
+        <ul class="hidden lg:flex gap-7 items-center list-none">
+          <li><a href="/" class="text-dark hover:text-primary font-medium text-sm no-underline">Home</a></li>
+          <li><a href="/about.html" class="text-dark hover:text-primary font-medium text-sm no-underline">About</a></li>
+          <li><a href="/admission-close.html" class="text-primary font-semibold text-sm no-underline" id="desktopAdmissionLink">Admissions</a></li>
+          <li><a href="/notices.html" class="text-dark hover:text-primary font-medium text-sm no-underline">Notices</a></li>
+          <li><a href="/gallery.html" class="text-dark hover:text-primary font-medium text-sm no-underline">Gallery</a></li>
+          <li><a href="/contact.html" class="text-dark hover:text-primary font-medium text-sm no-underline">Contact</a></li>
+        </ul>
+        <a href="/admin/login.html" class="hidden lg:inline-flex items-center gap-2 bg-secondary text-white px-4 py-2.5 rounded-xl font-heading font-semibold text-sm hover:bg-blue-900 no-underline"><i class="fas fa-lock text-xs"></i> Admin</a>
+        <button id="menuBtn" class="lg:hidden text-2xl p-2 text-dark"><i class="fas fa-bars"></i></button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="menuOverlay" class="fixed inset-0 bg-black/60 z-[1500] hidden" onclick="closeMenu()"></div>
+    <div id="mobileMenu" class="fixed top-0 right-0 w-full max-w-md h-full bg-white z-[2000] translate-x-full transition-transform duration-400 flex flex-col shadow-2xl">
+      <div class="p-5 border-b border-gray-100 flex items-center justify-between">
+        <div class="flex items-center gap-3"><img src="/favicon/favicon-96x96.png" alt="Logo" class="w-9 h-9 object-contain"><span class="font-heading font-bold text-lg text-dark">Rastranirman</span></div>
+        <button id="closeMenuBtn" class="text-2xl p-2 text-gray-500 hover:text-dark"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="flex-1 overflow-y-auto p-6 space-y-2">
+        <a href="/" class="block py-4 px-4 rounded-xl text-dark font-semibold hover:bg-gray-50 no-underline">Home</a>
+        <a href="/about.html" class="block py-4 px-4 rounded-xl text-dark font-semibold hover:bg-gray-50 no-underline">About</a>
+        <a href="/admission-close.html" class="block py-4 px-4 rounded-xl bg-primary/10 text-primary font-semibold no-underline" id="mobileAdmissionLink">Admissions</a>
+        <a href="/notices.html" class="block py-4 px-4 rounded-xl text-dark font-semibold hover:bg-gray-50 no-underline">Notices</a>
+        <a href="/gallery.html" class="block py-4 px-4 rounded-xl text-dark font-semibold hover:bg-gray-50 no-underline">Gallery</a>
+        <a href="/contact.html" class="block py-4 px-4 rounded-xl text-dark font-semibold hover:bg-gray-50 no-underline">Contact</a>
+      </div>
+      <div class="p-5 border-t border-gray-100"><a href="/admin/login.html" class="block w-full text-center bg-secondary text-white py-3 rounded-xl font-heading font-semibold no-underline">Admin Login</a></div>
+    </div>
+
+    <!-- HERO - Full Screen -->
+    <section class="relative min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('admission-closed.jpg');">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70"></div>
+      <div class="relative z-10 container text-center py-20">
+        <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-2.5 rounded-full text-xs md:text-sm font-medium mb-6 tracking-wide">
+          <i class="fas fa-circle text-[8px] text-red-400"></i> Admissions Update
+        </span>
+        <h1 class="font-heading font-extrabold text-4xl md:text-6xl lg:text-7xl text-white mb-5 leading-tight">Admissions are<br>Currently Closed</h1>
+        <p class="text-white/80 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+          Thank you for your interest in joining Rastranirman Secondary School. Admissions for the current academic session have now closed.
+        </p>
+        <div class="action-buttons">
+          <a href="#contact" class="btn btn-white"><i class="fas fa-phone-alt"></i> Contact Us</a>
+          <a href="/" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+      </div>
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 cursor-pointer opacity-60 hover:opacity-100" onclick="document.getElementById('messageSection').scrollIntoView({behavior:'smooth'})">
+        <span class="text-white/40 text-[10px] uppercase tracking-widest">Scroll</span>
+        <div class="w-5 h-8 border-2 border-white/30 rounded-full flex justify-center pt-1.5"><div class="w-1 h-2 bg-white rounded-full animate-bounce"></div></div>
+      </div>
+    </section>
+
+    <!-- MESSAGE SECTION - No card, clean -->
+    <section id="messageSection" class="bg-white">
+      <div class="container max-w-3xl text-center">
+        <div class="fade-in">
+          <div class="w-24 h-24 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-6 status-pulse">
+            <i class="fas fa-graduation-cap text-4xl text-red-500"></i>
+          </div>
+          <h2 class="font-heading font-bold text-3xl md:text-4xl text-dark mb-4">Admission Closed</h2>
+          <div class="section-divider mb-6"></div>
+          <p class="text-dark/65 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+            The admission process for the current academic session has officially ended. We sincerely appreciate your interest in becoming part of the Rastranirman Secondary School family.
+          </p>
+          <p class="text-dark/65 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mt-4">
+            If you have any questions regarding future admissions, eligibility, waiting lists, or the next admission schedule, please contact the school administration.
+          </p>
+          <span class="inline-flex items-center gap-2 bg-red-50 text-red-600 font-heading font-semibold px-6 py-3 rounded-full text-sm mt-8">
+            <i class="fas fa-circle text-[8px]"></i> Admissions Closed
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEXT STEPS - WITH CARDS -->
+    <section id="nextSteps" class="bg-light">
+      <div class="container">
+        <h2 class="font-heading font-bold text-2xl md:text-3xl text-center text-dark mb-4">What You Can Do Next</h2>
+        <div class="section-divider mb-12"></div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="fade-in card-hover bg-white rounded-2xl p-7 text-center border border-gray-100 shadow-sm">
+            <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-phone-alt text-2xl text-primary"></i></div>
+            <h3 class="font-heading font-semibold text-dark text-sm mb-2">Contact Administration</h3>
+            <p class="text-dark/50 text-xs leading-relaxed">Ask about future admissions and eligibility requirements.</p>
+          </div>
+          <div class="fade-in card-hover bg-white rounded-2xl p-7 text-center border border-gray-100 shadow-sm">
+            <div class="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-calendar-alt text-2xl text-secondary"></i></div>
+            <h3 class="font-heading font-semibold text-dark text-sm mb-2">Stay Updated</h3>
+            <p class="text-dark/50 text-xs leading-relaxed">Follow our notices for the next admission announcement.</p>
+          </div>
+          <div class="fade-in card-hover bg-white rounded-2xl p-7 text-center border border-gray-100 shadow-sm">
+            <div class="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-map-marker-alt text-2xl text-yellow-600"></i></div>
+            <h3 class="font-heading font-semibold text-dark text-sm mb-2">Visit the School</h3>
+            <p class="text-dark/50 text-xs leading-relaxed">Meet our admission team during office hours.</p>
+          </div>
+          <div class="fade-in card-hover bg-white rounded-2xl p-7 text-center border border-gray-100 shadow-sm">
+            <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-file-alt text-2xl text-primary"></i></div>
+            <h3 class="font-heading font-semibold text-dark text-sm mb-2">Prepare Documents</h3>
+            <p class="text-dark/50 text-xs leading-relaxed">Keep your documents ready for the next admission cycle.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="bg-white">
+      <div class="container">
+        <h2 class="font-heading font-bold text-2xl md:text-3xl text-center text-dark mb-4">Need More Information?</h2>
+        <div class="section-divider mb-10"></div>
+        <p class="text-dark/55 text-sm md:text-base max-w-xl mx-auto text-center mb-12">Our team will be happy to assist you with any admission-related questions.</p>
+        
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center mb-12">
+          <div class="fade-in">
+            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-3"><i class="fas fa-phone-alt text-lg text-primary"></i></div>
+            <p class="text-sm font-semibold text-dark">Phone</p>
+            <p class="text-xs text-dark/50 mt-1">+977 980-2718899</p>
+          </div>
+          <div class="fade-in">
+            <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center mx-auto mb-3"><i class="fas fa-envelope text-lg text-secondary"></i></div>
+            <p class="text-sm font-semibold text-dark">Email</p>
+            <p class="text-xs text-dark/50 mt-1">rastranirmanschool@gmail.com</p>
+          </div>
+          <div class="fade-in">
+            <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mx-auto mb-3"><i class="fas fa-map-marker-alt text-lg text-yellow-600"></i></div>
+            <p class="text-sm font-semibold text-dark">Address</p>
+            <p class="text-xs text-dark/50 mt-1">Timtime, Ratuwamai-10, Morang</p>
+          </div>
+          <div class="fade-in">
+            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-3"><i class="fas fa-clock text-lg text-primary"></i></div>
+            <p class="text-sm font-semibold text-dark">Hours</p>
+            <p class="text-xs text-dark/50 mt-1">Sun–Fri, 10 AM–4 PM</p>
+          </div>
+        </div>
+        
+        <div class="action-buttons">
+          <a href="tel:+9779802718899" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Call Now</a>
+          <a href="mailto:rastranirmanschool@gmail.com" class="btn btn-white"><i class="fas fa-envelope"></i> Send Email</a>
+          <a href="https://maps.app.goo.gl/8JmzC1v7iYEKrL9S9" target="_blank" class="btn btn-blue"><i class="fas fa-directions"></i> Get Directions</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="bg-light">
+      <div class="container max-w-3xl">
+        <h2 class="font-heading font-bold text-2xl md:text-3xl text-center text-dark mb-4">Frequently Asked Questions</h2>
+        <div class="section-divider mb-10"></div>
+        <div class="space-y-5">
+          <details class="fade-in group cursor-pointer pb-5 border-b border-gray-200">
+            <summary class="font-heading font-semibold text-dark text-sm list-none flex items-center justify-between">When will admissions open again? <i class="fas fa-chevron-down text-xs text-gray-400 group-open:rotate-180 transition-transform"></i></summary>
+            <p class="text-dark/65 text-sm mt-3 leading-relaxed">Admission dates are announced on our website and Facebook page. Check the Notices section regularly.</p>
+          </details>
+          <details class="fade-in group cursor-pointer pb-5 border-b border-gray-200">
+            <summary class="font-heading font-semibold text-dark text-sm list-none flex items-center justify-between">How can I know when admissions begin? <i class="fas fa-chevron-down text-xs text-gray-400 group-open:rotate-180 transition-transform"></i></summary>
+            <p class="text-dark/65 text-sm mt-3 leading-relaxed">Follow our website and Facebook page. We publish announcements as soon as admissions open.</p>
+          </details>
+          <details class="fade-in group cursor-pointer pb-5 border-b border-gray-200">
+            <summary class="font-heading font-semibold text-dark text-sm list-none flex items-center justify-between">Can I reserve a seat? <i class="fas fa-chevron-down text-xs text-gray-400 group-open:rotate-180 transition-transform"></i></summary>
+            <p class="text-dark/65 text-sm mt-3 leading-relaxed">Seat reservations are not available while admissions are closed. Please apply during the open period.</p>
+          </details>
+          <details class="fade-in group cursor-pointer pb-5 border-b border-gray-200">
+            <summary class="font-heading font-semibold text-dark text-sm list-none flex items-center justify-between">Can I visit the school? <i class="fas fa-chevron-down text-xs text-gray-400 group-open:rotate-180 transition-transform"></i></summary>
+            <p class="text-dark/65 text-sm mt-3 leading-relaxed">Yes! Visit during office hours (Sun-Fri, 10 AM-4 PM).</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- REMINDER -->
+    <section class="bg-white">
+      <div class="container max-w-2xl text-center">
+        <div class="fade-in flex items-center justify-center gap-3">
+          <div class="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-lightbulb text-accent"></i></div>
+          <p class="text-sm text-dark/60">The next admission announcement will be published on the school website and Facebook page.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#0f2647] text-gray-300 py-14">
+      <div class="container">
+        <div class="grid md:grid-cols-3 gap-10">
+          <div>
+            <div class="flex items-center gap-2.5 mb-3"><img src="/favicon/favicon-96x96.png" class="w-8 h-8"><span class="font-heading font-bold text-white text-lg">Rastranirman</span></div>
+            <p class="text-sm opacity-70">Quality education since 2054 B.S.</p>
+          </div>
+          <div>
+            <h4 class="font-heading font-semibold text-white mb-3 text-sm">Quick Links</h4>
+            <ul class="space-y-2 text-sm list-none">
+              <li><a href="/" class="text-gray-300 hover:text-white no-underline">Home</a></li>
+              <li><a href="/about.html" class="text-gray-300 hover:text-white no-underline">About</a></li>
+              <li><a href="/admission-close.html" class="text-gray-300 hover:text-white no-underline" id="footerAdmissionLink">Admissions</a></li>
+              <li><a href="/notices.html" class="text-gray-300 hover:text-white no-underline">Notices</a></li>
+              <li><a href="/gallery.html" class="text-gray-300 hover:text-white no-underline">Gallery</a></li>
+              <li><a href="/contact.html" class="text-gray-300 hover:text-white no-underline">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-heading font-semibold text-white mb-3 text-sm">Contact</h4>
+            <p class="text-sm mb-1"><i class="fas fa-phone mr-2 text-accent"></i>+977 980-2718899</p>
+            <p class="text-sm"><i class="fas fa-envelope mr-2 text-accent"></i>rastranirmanschool@gmail.com</p>
+          </div>
+        </div>
+        <div class="border-t border-gray-700 mt-10 pt-6 text-center text-xs opacity-60">&copy; <span id="year"></span> Rastranirman Secondary School. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+      import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+      const firebaseConfig = { apiKey: "AIzaSyC7yFOjTI28Jx6V1w9TRt-hLRseHa_FI9A", authDomain: "web-rtc-47862.firebaseapp.com", databaseURL: "https://web-rtc-47862-default-rtdb.firebaseio.com", projectId: "web-rtc-47862", storageBucket: "web-rtc-47862.firebasestorage.app", messagingSenderId: "503656932420", appId: "1:503656932420:web:e102f05d9cf4d7e4e1c811" };
+      const app = initializeApp(firebaseConfig); const db = getDatabase(app);
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      window.addEventListener("load",()=>{const l=document.getElementById("loader");if(l){l.style.opacity="0";l.style.visibility="hidden";setTimeout(()=>l.remove(),500);}});
+      setTimeout(()=>{const l=document.getElementById("loader");if(l&&l.style.opacity!=="0"){l.style.opacity="0";l.style.visibility="hidden";setTimeout(()=>l.remove(),500);}},3000);
+
+      const menuBtn=document.getElementById("menuBtn"), mobileMenu=document.getElementById("mobileMenu"), closeMenuBtn=document.getElementById("closeMenuBtn"), overlay=document.getElementById("menuOverlay");
+      function openMenu(){mobileMenu.style.transform="translateX(0)";overlay.classList.remove("hidden");overlay.style.display="block";document.body.style.overflow="hidden";}
+      window.closeMenu=function(){mobileMenu.style.transform="translateX(100%)";overlay.classList.add("hidden");overlay.style.display="none";document.body.style.overflow="";};
+      menuBtn?.addEventListener("click",openMenu); closeMenuBtn?.addEventListener("click",closeMenu); overlay?.addEventListener("click",closeMenu);
+      document.querySelectorAll("#mobileMenu a").forEach(a=>a.addEventListener("click",closeMenu));
+
+      const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");observer.unobserve(e.target);}});},{threshold:0.1});
+      document.querySelectorAll(".fade-in").forEach(el=>observer.observe(el));
+    </script>
+  </body>
+</html>

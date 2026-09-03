@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <title>Contact Us | Rastranirman Secondary School | Timtime, Morang</title>
+
+    <meta name="description" content="Contact Rastranirman Secondary School in Timtime, Ratuwamai-10, Morang. Reach us by phone, email, WhatsApp, or visit our campus." />
+    <meta name="keywords" content="contact Rastranirman school, school phone number Morang, WhatsApp school Timtime, Ratuwamai school contact" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0E8B4B" />
+
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#0E8B4B", secondary: "#1F3C88", accent: "#FFD400", dark: "#1E293B", light: "#F8FAFC" },
+            fontFamily: { heading: ["Poppins", "sans-serif"], body: ["Inter", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font-family: "Inter", sans-serif; background: #f8fafc; color: #1e293b; overflow-x: hidden; }
+      .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+      section { padding: 60px 0; }
+      
+      .btn { display: inline-flex; align-items: center; justify-content: center; font-family: "Poppins", sans-serif; font-weight: 600; padding: 12px 24px; border-radius: 50px; text-decoration: none; transition: all 0.35s; font-size: 0.85rem; cursor: pointer; border: none; gap: 8px; }
+      .btn-primary { background: #0e8b4b; color: #fff; }
+      .btn-primary:hover { background: #0a6e3a; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(14, 139, 75, 0.3); }
+      .btn-outline { background: transparent; color: #0e8b4b; border: 2px solid #0e8b4b; }
+      .btn-outline:hover { background: #0e8b4b; color: #fff; transform: translateY(-2px); }
+      .btn:focus-visible, a:focus-visible, button:focus-visible { outline: 2px solid #0E8B4B; outline-offset: 2px; }
+      
+      .shadow-soft { box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06); }
+      .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+      .fade-in.visible { opacity: 1; transform: translateY(0); }
+      
+      .contact-card { transition: all 0.3s ease; }
+      .contact-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
+      
+      .form-input { width: 100%; padding: 12px 16px; border-radius: 10px; border: 1.5px solid #E5EAE7; font-size: 0.85rem; background: #fff; transition: all 0.2s; }
+      .form-input:focus { outline: none; border-color: #0e8b4b; box-shadow: 0 0 0 3px rgba(14, 139, 75, 0.1); }
+      
+      .success-animation { animation: slideUp 0.5s ease-out; }
+      @keyframes slideUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      @media (max-width: 640px) {
+        .container { padding: 0 16px; }
+        section { padding: 50px 0; }
+        .btn { padding: 10px 20px; font-size: 0.8rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading -->
+    <div id="loader" class="fixed inset-0 bg-light flex items-center justify-center z-[9999] transition-opacity duration-500">
+      <img src="/favicon/favicon-96x96.png" alt="Rastranirman Logo" class="w-16 h-16 animate-pulse">
+    </div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 h-16 md:h-20">
+      <div class="container h-full flex items-center justify-between">
+        <a href="/" class="flex items-center gap-2.5 no-underline">
+          <img src="/favicon/favicon-96x96.png" alt="Rastranirman Secondary School Logo" class="w-8 h-8 object-contain">
+          <span class="font-heading font-bold text-sm md:text-lg text-dark">Rastranirman</span>
+        </a>
+        <ul class="hidden lg:flex gap-7 items-center list-none">
+          <li><a href="/" class="text-dark hover:text-primary font-medium text-sm no-underline">Home</a></li>
+          <li><a href="/about.html" class="text-dark hover:text-primary font-medium text-sm no-underline">About</a></li>
+          <li><a href="/admission-close.html" class="text-dark hover:text-primary font-medium text-sm no-underline" id="desktopAdmissionLink">Admissions</a></li>
+          <li><a href="/notices.html" class="text-dark hover:text-primary font-medium text-sm no-underline">Notices</a></li>
+          <li><a href="/gallery.html" class="text-dark hover:text-primary font-medium text-sm no-underline">Gallery</a></li>
+          <li><a href="/contact.html" class="text-primary font-semibold text-sm no-underline" aria-current="page">Contact</a></li>
+        </ul>
+        <a href="/admin/login.html" class="hidden lg:inline-flex items-center gap-2 bg-secondary text-white px-4 py-2.5 rounded-xl font-heading font-semibold text-sm no-underline"><i class="fas fa-lock text-xs"></i> Admin</a>
+        <button id="menuBtn" class="lg:hidden text-2xl p-2 text-dark" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><i class="fas fa-bars"></i></button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="menuOverlay" class="fixed inset-0 bg-black/60 z-[1500] hidden"></div>
+    <div id="mobileMenu" class="fixed top-0 right-0 w-full max-w-md h-full bg-white z-[2000] translate-x-full transition-transform duration-400 flex flex-col shadow-2xl" aria-hidden="true">
+      <div class="p-5 border-b border-gray-100 flex items-center justify-between">
+        <div class="flex items-center gap-3"><img src="/favicon/favicon-96x96.png" alt="Rastranirman Logo" class="w-9 h-9 object-contain"><span class="font-heading font-bold text-lg text-dark">Rastranirman</span></div>
+        <button id="closeMenuBtn" class="text-2xl p-2 text-gray-500 hover:text-dark" aria-label="Close menu"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="flex-1 overflow-y-auto p-6 space-y-2">
+        <a href="/" class="block py-4 px-4 rounded-xl text-dark font-semibold no-underline">Home</a>
+        <a href="/about.html" class="block py-4 px-4 rounded-xl text-dark font-semibold no-underline">About</a>
+        <a href="/admission-close.html" class="block py-4 px-4 rounded-xl text-dark font-semibold no-underline" id="mobileAdmissionLink">Admissions</a>
+        <a href="/notices.html" class="block py-4 px-4 rounded-xl text-dark font-semibold no-underline">Notices</a>
+        <a href="/gallery.html" class="block py-4 px-4 rounded-xl text-dark font-semibold no-underline">Gallery</a>
+        <a href="/contact.html" class="block py-4 px-4 rounded-xl bg-primary/10 text-primary font-semibold no-underline">Contact</a>
+      </div>
+      <div class="p-5 border-t border-gray-100"><a href="/admin/login.html" class="block w-full text-center bg-secondary text-white py-3 rounded-xl font-heading font-semibold no-underline">Admin Login</a></div>
+    </div>
+
+    <!-- Hero -->
+    <section class="relative min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.prismic.io/ip-about-us/e677e12a-0dd6-4b2b-922a-69fd37ff9553_Contact+Us.jpg?auto=compress,format');">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70"></div>
+      <div class="relative z-10 container text-center py-20">
+        <nav class="flex items-center gap-2 text-white/80 text-sm mb-4 justify-center" aria-label="Breadcrumb">
+          <a href="/" class="text-white/80 hover:text-white no-underline">Home</a>
+          <span class="text-white/60">/</span>
+          <span class="text-white font-medium">Contact</span>
+        </nav>
+        <h1 class="font-heading font-extrabold text-4xl md:text-6xl text-white mb-4">Contact Us</h1>
+        <p class="text-white/85 text-base md:text-lg max-w-xl mx-auto">We're here to help. Reach out via phone, WhatsApp, email, or visit our campus.</p>
+      </div>
+    </section>
+
+    <!-- Contact Cards -->
+    <section class="bg-light">
+      <div class="container">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <!-- Address Card -->
+          <div class="contact-card fade-in bg-white rounded-2xl p-6 text-center border border-gray-100">
+            <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-map-marker-alt text-xl text-primary"></i>
+            </div>
+            <h3 class="font-heading font-semibold text-dark mb-2 text-sm">Address</h3>
+            <p class="text-dark/55 text-xs leading-relaxed">Rastranirman Secondary School<br />Timtime, Ratuwamai-10<br />Morang, Nepal</p>
+          </div>
+
+          <!-- Phone Card -->
+          <div class="contact-card fade-in bg-white rounded-2xl p-6 text-center border border-gray-100">
+            <div class="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-phone-alt text-xl text-secondary"></i>
+            </div>
+            <h3 class="font-heading font-semibold text-dark mb-2 text-sm">Phone</h3>
+            <a href="tel:+9779802718899" class="text-dark/55 text-xs hover:text-primary transition-colors no-underline">+977 980-2718899</a>
+          </div>
+
+          <!-- Email Card -->
+          <div class="contact-card fade-in bg-white rounded-2xl p-6 text-center border border-gray-100">
+            <div class="w-14 h-14 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-envelope text-xl text-yellow-600"></i>
+            </div>
+            <h3 class="font-heading font-semibold text-dark mb-2 text-sm">Email</h3>
+            <a href="mailto:rastranirmanschool@gmail.com" class="text-dark/55 text-xs hover:text-primary transition-colors no-underline break-all">rastranirmanschool@gmail.com</a>
+          </div>
+
+          <!-- WhatsApp Card -->
+          <div class="contact-card fade-in bg-white rounded-2xl p-6 text-center border border-gray-100">
+            <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fab fa-whatsapp text-xl text-green-600"></i>
+            </div>
+            <h3 class="font-heading font-semibold text-dark mb-2 text-sm">WhatsApp</h3>
+            <a href="javascript:void(0)" id="whatsappLink" class="text-dark/55 text-xs hover:text-primary transition-colors no-underline">+977 980-2700901</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="bg-white" id="contactFormSection">
+      <div class="container max-w-2xl">
+        <div class="bg-white rounded-2xl shadow-soft border border-gray-100" id="formCard">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="font-heading font-semibold text-dark text-sm"><i class="fas fa-envelope mr-2 text-primary"></i>Send Us a Message</h3>
+          </div>
+          <div class="p-5 md:p-8">
+            <div id="formContent">
+              <form id="contactForm" class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label for="fullName" class="block text-xs font-semibold text-gray-600 mb-1">Full Name *</label>
+                    <input type="text" id="fullName" required minlength="3" class="form-input" placeholder="Your full name" />
+                  </div>
+                  <div>
+                    <label for="phone" class="block text-xs font-semibold text-gray-600 mb-1">Phone Number *</label>
+                    <input type="tel" id="phone" required pattern="[0-9]{10}" class="form-input" placeholder="98XXXXXXXX" />
+                  </div>
+                </div>
+                <div>
+                  <label for="email" class="block text-xs font-semibold text-gray-600 mb-1">Email Address</label>
+                  <input type="email" id="email" class="form-input" placeholder="email@example.com" />
+                </div>
+                <div>
+                  <label for="subject" class="block text-xs font-semibold text-gray-600 mb-1">Subject *</label>
+                  <select id="subject" required class="form-input">
+                    <option value="">Select Subject</option>
+                    <option>General Inquiry</option>
+                    <option>Admission</option>
+                    <option>Academic</option>
+                    <option>Examination</option>
+                    <option>Certificates</option>
+                    <option>Complaint</option>
+                    <option>Suggestion</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="message" class="block text-xs font-semibold text-gray-600 mb-1">Message *</label>
+                  <textarea id="message" required minlength="10" rows="4" class="form-input" placeholder="Write your message here..."></textarea>
+                </div>
+                <div>
+                  <label class="flex items-start gap-2 cursor-pointer">
+                    <input type="checkbox" id="agreement" required class="w-4 h-4 text-primary rounded mt-0.5" />
+                    <span class="text-xs text-dark/70">I agree that the information provided is correct.</span>
+                  </label>
+                </div>
+                <button type="submit" id="submitBtn" class="btn btn-primary w-full py-3 text-sm disabled:opacity-60 disabled:cursor-not-allowed">
+                  <span id="submitText">Send Message</span>
+                  <i id="submitLoader" class="fas fa-spinner fa-spin hidden"></i>
+                </button>
+              </form>
+            </div>
+            
+            <div id="successMessage" class="hidden text-center success-animation py-8">
+              <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-check-circle text-4xl text-green-600"></i>
+              </div>
+              <h4 class="font-heading font-bold text-2xl text-green-800 mb-2">Thank You!</h4>
+              <p class="text-green-700 text-sm mb-4">Your message has been submitted successfully. We'll contact you soon.</p>
+              <p class="text-xs text-gray-500 mb-2">Your Reference Number:</p>
+              <div class="bg-green-50 inline-block px-8 py-4 rounded-xl border-2 border-green-300 font-mono text-xl font-bold text-primary mb-6" id="referenceNumberDisplay">MSG-2026-000125</div>
+              <br />
+              <button id="sendAnotherBtn" class="btn btn-outline text-sm"><i class="fas fa-plus mr-1"></i> Send Another Message</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="bg-light">
+      <div class="container">
+        <div class="bg-white rounded-2xl shadow-soft overflow-hidden border border-gray-100">
+          <div class="p-5 border-b border-gray-100">
+            <h3 class="font-heading font-semibold text-dark text-sm"><i class="fas fa-map-marked-alt mr-2 text-primary"></i>Our Location</h3>
+          </div>
+          <div class="h-72 md:h-96">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3567.858001254018!2d87.61230097542833!3d26.588931576841663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e58602a67b1bbb%3A0xa0bb13f23e60aae5!2sRastranirman%20School!5e0!3m2!1sen!2snp!4v1784007854007!5m2!1sen!2snp" width="100%" height="100%" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Rastranirman School location"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Office Hours -->
+    <section class="bg-white">
+      <div class="container max-w-lg">
+        <h2 class="font-heading font-bold text-2xl text-center text-dark mb-6">Office Hours</h2>
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 divide-y divide-gray-100">
+          <div class="flex justify-between items-center p-4 text-sm"><span class="font-medium">Sunday – Friday</span><span class="text-dark/60">10:00 AM – 4:00 PM</span></div>
+          <div class="flex justify-between items-center p-4 text-sm bg-red-50 rounded-b-2xl"><span class="font-medium text-red-600">Saturday</span><span class="text-red-600 font-medium">Closed</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="bg-light">
+      <div class="container max-w-2xl">
+        <h2 class="font-heading font-bold text-2xl text-center text-dark mb-6">Frequently Asked Questions</h2>
+        <div class="space-y-3">
+          <details class="bg-white rounded-xl p-5 shadow-sm group cursor-pointer border border-gray-100">
+            <summary class="font-heading font-semibold text-dark text-sm list-none flex items-center justify-between">How long does it take to receive a reply? <i class="fas fa-chevron-down text-xs group-open:rotate-180 transition-transform"></i></summary>
+            <p class="text-dark/65 text-sm mt-3">We typically respond within 1-2 working days. For urgent matters, please call or WhatsApp us directly.</p>
+          </details>
+          <details class="bg-white rounded-xl p-5 shadow-sm group cursor-pointer border border-gray-100">
+            <summary class="font-heading font-semibold text-dark text-sm list-none flex items-center justify-between">Can I message on WhatsApp? <i class="fas fa-chevron-down text-xs group-open:rotate-180 transition-transform"></i></summary>
+            <p class="text-dark/65 text-sm mt-3">Yes! Send us a message on WhatsApp at +977 980-2700901. We respond during office hours.</p>
+          </details>
+          <details class="bg-white rounded-xl p-5 shadow-sm group cursor-pointer border border-gray-100">
+            <summary class="font-heading font-semibold text-dark text-sm list-none flex items-center justify-between">Can I visit the school without an appointment? <i class="fas fa-chevron-down text-xs group-open:rotate-180 transition-transform"></i></summary>
+            <p class="text-dark/65 text-sm mt-3">Yes, you are welcome to visit during office hours.</p>
+          </details>
+          <details class="bg-white rounded-xl p-5 shadow-sm group cursor-pointer border border-gray-100">
+            <summary class="font-heading font-semibold text-dark text-sm list-none flex items-center justify-between">Where is the school located? <i class="fas fa-chevron-down text-xs group-open:rotate-180 transition-transform"></i></summary>
+            <p class="text-dark/65 text-sm mt-3">We are located in Timtime, Ratuwamai-10, Morang, Nepal.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0f2647] text-gray-300 py-12 md:py-16">
+      <div class="container">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>
+            <div class="flex items-center gap-2 mb-3">
+              <img src="/favicon/favicon-96x96.png" class="w-7 h-7 object-contain" alt="Rastranirman Logo">
+              <span class="font-heading font-bold text-white text-lg">Rastranirman</span>
+            </div>
+            <p class="text-sm opacity-80">Quality education since 2054 B.S.</p>
+          </div>
+          <div>
+            <h4 class="font-heading font-semibold text-white mb-3 text-sm">Links</h4>
+            <ul class="space-y-1.5 text-sm list-none">
+              <li><a href="/" class="text-gray-300 hover:text-white no-underline">Home</a></li>
+              <li><a href="/about.html" class="text-gray-300 hover:text-white no-underline">About</a></li>
+              <li><a href="/admission-close.html" class="text-gray-300 hover:text-white no-underline" id="footerAdmissionLink">Admissions</a></li>
+              <li><a href="/notices.html" class="text-gray-300 hover:text-white no-underline">Notices</a></li>
+              <li><a href="/gallery.html" class="text-gray-300 hover:text-white no-underline">Gallery</a></li>
+              <li><a href="/contact.html" class="text-gray-300 hover:text-white no-underline">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-heading font-semibold text-white mb-3 text-sm">Contact</h4>
+            <p class="text-sm mb-1"><i class="fas fa-phone mr-2 text-accent"></i>+977 980-2718899</p>
+            <p class="text-sm"><i class="fas fa-envelope mr-2 text-accent"></i>rastranirmanschool@gmail.com</p>
+          </div>
+        </div>
+        <div class="border-t border-gray-600 mt-8 pt-6 text-center text-xs opacity-70">&copy; <span id="year"></span> Rastranirman Secondary School. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+      import { getDatabase, ref, get, push } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyC7yFOjTI28Jx6V1w9TRt-hLRseHa_FI9A",
+        authDomain: "web-rtc-47862.firebaseapp.com",
+        databaseURL: "https://web-rtc-47862-default-rtdb.firebaseio.com",
+        projectId: "web-rtc-47862",
+        storageBucket: "web-rtc-47862.firebasestorage.app",
+        messagingSenderId: "503656932420",
+        appId: "1:503656932420:web:e102f05d9cf4d7e4e1c811",
+      };
+
+      let app, db;
+      try {
+        app = initializeApp(firebaseConfig);
+        db = getDatabase(app);
+      } catch (error) {
+        console.error('Firebase initialization failed:', error);
+      }
+
+      const state = {
+        admissionLoaded: false,
+        isSubmitting: false,
+      };
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      function openWhatsApp() {
+        const phone = "9779802700901";
+        const message = "Namaste!\n\nI visited the Rastranirman Secondary School website and would like to know more about admissions, programs, and facilities.\n\nPlease assist me.\n\nThank you!";
+        window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+      }
+
+// Cache keys
+const ADMISSION_CACHE_KEY = 'admissionStatus';
+const ADMISSION_CACHE_TIME_KEY = 'admissionStatusTime';
+const ADMISSION_CACHE_DURATION = 600000; // 10 minutes
+
+// Define link IDs
+const ADMISSION_LINK_IDS = ["desktopAdmissionLink", "mobileAdmissionLink", "footerAdmissionLink"];
+
+// Apply admission links synchronously
+function applyAdmissionLinks(status) {
+    const normalizedStatus = String(status || 'closed').trim().toLowerCase();
+    let url = "/admission-close.html";
+    
+    if (normalizedStatus === "school") {
+        url = "/school-admission.html";
+    } else if (normalizedStatus === "grade11") {
+        url = "/grade11-admission.html";
+    }
+    
+    ADMISSION_LINK_IDS.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.href = url;
+            el.setAttribute('data-admission-status', normalizedStatus);
+        }
+    });
+    
+    return normalizedStatus;
+}
+
+// Get cached admission status
+function getCachedAdmissionStatus() {
+    try {
+        const cachedStatus = localStorage.getItem(ADMISSION_CACHE_KEY);
+        const cachedTime = localStorage.getItem(ADMISSION_CACHE_TIME_KEY);
+        
+        if (cachedStatus && cachedTime) {
+            const age = Date.now() - parseInt(cachedTime, 10);
+            if (age < ADMISSION_CACHE_DURATION) {
+                return cachedStatus;
+            }
+        }
+    } catch (e) {
+        // Silent fail if localStorage unavailable
+    }
+    return null;
+}
+
+// Cache admission status
+function cacheAdmissionStatus(status) {
+    try {
+        localStorage.setItem(ADMISSION_CACHE_KEY, status);
+        localStorage.setItem(ADMISSION_CACHE_TIME_KEY, Date.now().toString());
+    } catch (e) {
+        // Silent fail if localStorage unavailable
+    }
+}
+
+// Load admission links with caching and fallback
+async function loadAdmissionLinks() {
+    // Apply cached or default immediately
+    const cachedStatus = getCachedAdmissionStatus();
+    if (cachedStatus) {
+        applyAdmissionLinks(cachedStatus);
+    } else {
+        applyAdmissionLinks('closed');
+    }
+    
+    // If already loaded or no db, use cache/default
+    if (state.admissionLoaded || !db) {
+        return;
+    }
+    
+    try {
+        const snap = await get(ref(db, "settings/admissionStatus"));
+        const status = snap.exists() ? String(snap.val()).trim().toLowerCase() : "closed";
+        
+        // Apply fetched status
+        applyAdmissionLinks(status);
+        
+        // Cache for future use
+        cacheAdmissionStatus(status);
+        
+        // Mark as loaded
+        state.admissionLoaded = true;
+        
+        return status;
+    } catch (error) {
+        console.warn('Failed to load admission status from Firebase:', error);
+        
+        // Fallback to cached status
+        if (cachedStatus) {
+            applyAdmissionLinks(cachedStatus);
+        } else {
+            applyAdmissionLinks('closed');
+        }
+        
+        // Don't set admissionLoaded to true on error, allow retry
+        return null;
+    }
+}
+
+// Listen for admission status changes from other tabs
+window.addEventListener('storage', (e) => {
+    if (e.key === ADMISSION_CACHE_KEY && e.newValue) {
+        applyAdmissionLinks(e.newValue);
+    }
+});
+
+// Refresh when page becomes visible
+document.addEventListener('visibilitychange', () => {
+    if (!document.hidden && !state.admissionLoaded) {
+        loadAdmissionLinks();
+    }
+});
+
+// Initialize immediately
+(function initAdmissionLinks() {
+    // Apply cached/default immediately
+    const cachedStatus = getCachedAdmissionStatus();
+    if (cachedStatus) {
+        applyAdmissionLinks(cachedStatus);
+    } else {
+        applyAdmissionLinks('closed');
+    }
+    
+    // Then load from Firebase
+    loadAdmissionLinks();
+})();
+
+      function openMenu() {
+        document.getElementById("mobileMenu").style.transform = "translateX(0)";
+        document.getElementById("menuOverlay").classList.remove("hidden");
+        document.getElementById("menuOverlay").style.display = "block";
+        document.getElementById("menuBtn").setAttribute("aria-expanded", "true");
+        document.getElementById("mobileMenu").setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeMenu() {
+        document.getElementById("mobileMenu").style.transform = "translateX(100%)";
+        document.getElementById("menuOverlay").classList.add("hidden");
+        document.getElementById("menuOverlay").style.display = "none";
+        document.getElementById("menuBtn").setAttribute("aria-expanded", "false");
+        document.getElementById("mobileMenu").setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      }
+
+      function hideLoader() {
+        const l = document.getElementById("loader");
+        if (l) {
+          l.style.opacity = "0";
+          l.style.visibility = "hidden";
+          setTimeout(() => l.remove(), 500);
+        }
+      }
+
+      function showSuccessMessage(refNum) {
+        const formContent = document.getElementById("formContent");
+        const successMessage = document.getElementById("successMessage");
+        
+        // Hide form
+        formContent.style.display = "none";
+        
+        // Set reference number
+        document.getElementById("referenceNumberDisplay").textContent = refNum;
+        
+        // Show success message
+        successMessage.classList.remove("hidden");
+        successMessage.classList.add("success-animation");
+        
+        // Scroll to form card smoothly
+        const formCard = document.getElementById("formCard");
+        if (formCard) {
+          const yOffset = -100; // Account for fixed navbar
+          const y = formCard.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      }
+
+      function resetForm() {
+        const form = document.getElementById("contactForm");
+        const formContent = document.getElementById("formContent");
+        const successMessage = document.getElementById("successMessage");
+        
+        // Reset form fields
+        form.reset();
+        
+        // Show form content
+        formContent.style.display = "";
+        
+        // Hide success message
+        successMessage.classList.add("hidden");
+        successMessage.classList.remove("success-animation");
+        
+        // Scroll to form card smoothly
+        const formCard = document.getElementById("formCard");
+        if (formCard) {
+          const yOffset = -100;
+          const y = formCard.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+        
+        // Focus on first input
+        setTimeout(() => {
+          document.getElementById("fullName").focus();
+        }, 600);
+      }
+
+      document.getElementById("menuBtn").addEventListener("click", openMenu);
+      document.getElementById("closeMenuBtn").addEventListener("click", closeMenu);
+      document.getElementById("menuOverlay").addEventListener("click", closeMenu);
+      document.querySelectorAll("#mobileMenu a").forEach(a => a.addEventListener("click", closeMenu));
+
+      document.getElementById("whatsappLink").addEventListener("click", openWhatsApp);
+      document.getElementById("sendAnotherBtn").addEventListener("click", resetForm);
+
+      document.getElementById("contactForm").addEventListener("submit", async function(e) {
+        e.preventDefault();
+        
+        if (state.isSubmitting) return;
+        
+        state.isSubmitting = true;
+        const btn = document.getElementById("submitBtn");
+        btn.disabled = true;
+        document.getElementById("submitText").textContent = "Sending...";
+        document.getElementById("submitLoader").classList.remove("hidden");
+
+        try {
+          if (!db) throw new Error("Database not initialized");
+          
+          const refNum = `MSG-${new Date().getFullYear()}-${Math.floor(100000 + Math.random() * 900000)}`;
+          
+          await push(ref(db, "contactMessages"), {
+            referenceNumber: refNum,
+            submittedAt: new Date().toISOString(),
+            status: "Pending",
+            fullName: document.getElementById("fullName").value.trim(),
+            phone: document.getElementById("phone").value.trim(),
+            email: document.getElementById("email").value.trim(),
+            subject: document.getElementById("subject").value,
+            message: document.getElementById("message").value.trim(),
+          });
+
+          showSuccessMessage(refNum);
+        } catch (err) {
+          console.error('Failed to send message:', err);
+          alert("Failed to send message. Please try again.");
+        } finally {
+          state.isSubmitting = false;
+          btn.disabled = false;
+          document.getElementById("submitText").textContent = "Send Message";
+          document.getElementById("submitLoader").classList.add("hidden");
+        }
+      });
+
+      window.addEventListener("load", hideLoader);
+      setTimeout(hideLoader, 5000);
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add("visible");
+            observer.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+
+      loadAdmissionLinks();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://rastranirman.edu.np/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rastranirman.edu.np/"/>
+    <image:image>
+      <image:loc>https://rastranirman.edu.np/favicon/favicon-96x96.png</image:loc>
+      <image:title>Rastranirman Secondary School</image:title>
+    </image:image>
+  </url>
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://rastranirman.edu.np/about.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rastranirman.edu.np/about.html"/>
+  </url>
+  
+  <!-- Admissions Pages -->
+  <url>
+    <loc>https://rastranirman.edu.np/admission-close.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rastranirman.edu.np/admission-close.html"/>
+  </url>
+  
+  <url>
+    <loc>https://rastranirman.edu.np/school-admission.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rastranirman.edu.np/school-admission.html"/>
+  </url>
+  
+  <url>
+    <loc>https://rastranirman.edu.np/grade11-admission.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rastranirman.edu.np/grade11-admission.html"/>
+  </url>
+  
+  <!-- Notices Page -->
+  <url>
+    <loc>https://rastranirman.edu.np/notices.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rastranirman.edu.np/notices.html"/>
+  </url>
+  
+  <!-- Gallery Page -->
+  <url>
+    <loc>https://rastranirman.edu.np/gallery.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rastranirman.edu.np/gallery.html"/>
+  </url>
+  
+  <!-- Contact Page -->
+  <url>
+    <loc>https://rastranirman.edu.np/contact.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rastranirman.edu.np/contact.html"/>
+  </url>
+  
+  <!-- Admin Login Page -->
+  <url>
+    <loc>https://rastranirman.edu.np/admin/login.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rastranirman.edu.np/admin/login.html"/>
+  </url>
+  
+  <!-- Error Pages -->
+  <url>
+    <loc>https://rastranirman.edu.np/403.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rastranirman.edu.np/403.html"/>
+  </url>
+  
+  <url>
+    <loc>https://rastranirman.edu.np/404.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rastranirman.edu.np/404.html"/>
+  </url>
+  
+</urlset>

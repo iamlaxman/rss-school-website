@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Administrator Login | Rastranirman Secondary School</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Rastranirman Admin" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
+  <meta name="theme-color" content="#0E8B4B" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0E8B4B',
+            secondary: '#1F3C88',
+            accent: '#FFD400',
+            dark: '#1E293B',
+            light: '#F8FAFC',
+          },
+          fontFamily: {
+            'heading': ['Poppins', 'sans-serif'],
+            'body': ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+    
+    body { 
+      font-family: "Inter", sans-serif;
+      background: #fff;
+    }
+    
+    .admin-container {
+      display: flex;
+      height: 100vh;
+      height: 100dvh;
+      width: 100%;
+      position: relative;
+    }
+    
+    /* Left Brand Panel */
+    .brand-panel {
+      flex: 1;
+      background: linear-gradient(135deg, #0a6e3a 0%, #0E8B4B 30%, #1F3C88 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      animation: fadeInLeft 0.8s ease-out;
+    }
+    
+    @keyframes fadeInLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    
+    .brand-panel::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center, rgba(255,255,255,0.08) 0%, transparent 50%);
+      animation: rotate 30s infinite linear;
+    }
+    
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    .brand-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      max-width: 450px;
+      animation: slideUp 0.8s ease-out 0.3s both;
+    }
+    
+    .brand-logo {
+      animation: float 3s infinite ease-in-out;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Right Login Panel */
+    .login-panel {
+      width: 50%;
+      max-width: 560px;
+      min-width: 400px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px;
+      position: relative;
+      animation: fadeInRight 0.8s ease-out;
+    }
+    
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    
+    .input-group {
+      position: relative;
+      animation: slideUp 0.6s ease-out both;
+    }
+    
+    .input-group:nth-child(1) { animation-delay: 0.4s; }
+    .input-group:nth-child(2) { animation-delay: 0.5s; }
+    .input-group:nth-child(3) { animation-delay: 0.6s; }
+    .input-group:nth-child(4) { animation-delay: 0.7s; }
+    
+    .input-wrapper {
+      position: relative;
+    }
+    
+    .input-field {
+      width: 100%;
+      padding: 14px 16px 14px 46px;
+      border: 2px solid #E5EAE7;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      background: #F8FAFC;
+      font-family: "Inter", sans-serif;
+    }
+    
+    .input-field:hover {
+      border-color: #CBD5E0;
+      background: #fff;
+    }
+    
+    .input-field:focus {
+      outline: none;
+      border-color: #0E8B4B;
+      background: #fff;
+      box-shadow: 0 0 0 4px rgba(14, 139, 75, 0.1);
+    }
+    
+    .input-icon {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #94a3b8;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+      pointer-events: none;
+      z-index: 1;
+    }
+    
+    .input-wrapper:focus-within .input-icon {
+      color: #0E8B4B;
+    }
+    
+    .toggle-checkbox {
+      position: relative;
+      width: 46px;
+      height: 26px;
+      appearance: none;
+      background: #e2e8f0;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      flex-shrink: 0;
+    }
+    
+    .toggle-checkbox:checked {
+      background: #0E8B4B;
+    }
+    
+    .toggle-checkbox:before {
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      top: 2px;
+      left: 2px;
+      background: white;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .toggle-checkbox:checked:before {
+      transform: translateX(20px);
+    }
+    
+    .login-btn {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, #0E8B4B 0%, #0a6e3a 100%);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .login-btn::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+    
+    .login-btn:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+    
+    .login-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(14, 139, 75, 0.4);
+    }
+    
+    .login-btn:active {
+      transform: translateY(0);
+    }
+    
+    .login-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+    
+    .error-shake {
+      animation: shake 0.5s ease-in-out;
+    }
+    
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      75% { transform: translateX(10px); }
+    }
+    
+    .modal-overlay {
+      animation: fadeIn 0.3s ease-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    .modal-content {
+      animation: slideUpModal 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    @keyframes slideUpModal {
+      from { opacity: 0; transform: translateY(30px) scale(0.95); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    
+    .spinner {
+      animation: spin 0.8s infinite linear;
+    }
+    
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    /* Mobile/Desktop visibility */
+    .mobile-header {
+      display: none;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .brand-panel {
+        padding: 30px;
+      }
+      
+      .login-panel {
+        padding: 30px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .brand-panel {
+        display: none;
+      }
+      
+      .login-panel {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        padding: 24px;
+        animation: fadeInUp 0.6s ease-out;
+      }
+      
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(50px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      .mobile-header {
+        display: flex;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .login-panel {
+        padding: 20px 16px;
+      }
+      
+      .input-field {
+        padding: 12px 12px 12px 40px;
+        font-size: 0.85rem;
+        border-radius: 10px;
+      }
+      
+      .input-icon {
+        left: 14px;
+        font-size: 0.8rem;
+      }
+      
+      .login-btn {
+        padding: 12px;
+        font-size: 0.85rem;
+        border-radius: 10px;
+      }
+      
+      .toggle-checkbox {
+        width: 40px;
+        height: 22px;
+      }
+      
+      .toggle-checkbox:before {
+        width: 18px;
+        height: 18px;
+      }
+      
+      .toggle-checkbox:checked:before {
+        transform: translateX(18px);
+      }
+    }
+    
+    @media (max-width: 320px) {
+      .login-panel {
+        padding: 16px 12px;
+      }
+      
+      .input-field {
+        padding: 10px 10px 10px 36px;
+        font-size: 0.8rem;
+      }
+    }
+    
+    @media (max-height: 500px) and (orientation: landscape) {
+      .login-panel {
+        padding: 16px;
+        justify-content: flex-start;
+        overflow-y: auto;
+      }
+      
+      .brand-panel {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body class="font-body">
+
+  <div class="admin-container">
+    
+    <!-- Left Brand Panel (Desktop only) -->
+    <div class="brand-panel">
+      <div class="brand-content">
+        <div class="brand-logo w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-6 backdrop-blur-sm border border-white/20 shadow-lg">
+          <img src="/favicon/favicon-96x96.png" alt="Rastranirman Logo" class="w-12 h-12 object-contain">
+        </div>
+        <h1 class="font-heading font-bold text-3xl md:text-4xl mb-3">Rastranirman</h1>
+        <p class="text-white/80 text-lg mb-2">Secondary School</p>
+        <p class="text-white/60 text-sm mb-8">Administrative Portal</p>
+        
+        <div class="flex flex-col gap-3">
+          <div class="flex items-center gap-3 text-white/80 text-sm bg-white/10 rounded-xl px-4 py-3 backdrop-blur-sm">
+            <i class="fas fa-check-circle text-accent"></i>
+            <span>Secure Admin Access</span>
+          </div>
+          <div class="flex items-center gap-3 text-white/80 text-sm bg-white/10 rounded-xl px-4 py-3 backdrop-blur-sm">
+            <i class="fas fa-check-circle text-accent"></i>
+            <span>Protected by Firebase</span>
+          </div>
+          <div class="flex items-center gap-3 text-white/80 text-sm bg-white/10 rounded-xl px-4 py-3 backdrop-blur-sm">
+            <i class="fas fa-check-circle text-accent"></i>
+            <span>Role-based Authorization</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Login Panel -->
+    <div class="login-panel">
+      
+      <!-- Back to Site -->
+      <a href="/" class="absolute top-6 left-6 md:top-8 md:left-8 inline-flex items-center gap-2 text-dark/50 hover:text-dark text-xs no-underline transition-all hover:gap-3 z-20">
+        <i class="fas fa-arrow-left text-[10px]"></i> Back to Site
+      </a>
+
+      <!-- Login Form Container -->
+      <div class="w-full max-w-sm mx-auto">
+        
+        <!-- Mobile Header (visible only on mobile) -->
+        <div class="mobile-header flex flex-col items-center mb-6">
+          <div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-4">
+            <img src="/favicon/favicon-96x96.png" alt="Rastranirman Logo" class="w-14 h-14 object-contain">
+          </div>
+          <h2 class="font-heading font-bold text-xl text-dark">Rastranirman</h2>
+          <p class="text-dark/50 text-xs mt-1">Administrative Portal</p>
+        </div>
+
+        <!-- Form -->
+        <form id="loginForm" class="space-y-5">
+          
+          <!-- Email -->
+          <div class="input-group">
+            <label for="email" class="block text-xs font-semibold text-gray-700 mb-2">Email Address</label>
+            <div class="input-wrapper">
+              <span class="input-icon">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <input type="email" id="email" required autocomplete="email" placeholder="admin@rastranirman.edu.np" 
+                     class="input-field">
+            </div>
+          </div>
+
+          <!-- Password -->
+          <div class="input-group">
+            <label for="password" class="block text-xs font-semibold text-gray-700 mb-2">Password</label>
+            <div class="input-wrapper">
+              <span class="input-icon">
+                <i class="fas fa-key"></i>
+              </span>
+              <input type="password" id="password" required minlength="8" autocomplete="current-password" placeholder="Enter your password"
+                     class="input-field pr-12">
+              <button type="button" id="togglePassword" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 p-2 rounded-lg hover:bg-gray-100 transition-all z-10" aria-label="Toggle password visibility">
+                <i class="fas fa-eye text-xs"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Remember Me & Forgot Password -->
+          <div class="input-group flex items-center justify-between gap-4">
+            <label class="flex items-center gap-3 cursor-pointer group">
+              <input type="checkbox" id="rememberMe" class="toggle-checkbox" />
+              <span class="text-xs text-dark/60 group-hover:text-dark transition-colors">Remember me</span>
+            </label>
+            <a href="#" id="forgotPasswordLink" class="text-xs text-primary hover:text-green-700 no-underline font-medium transition-colors">Forgot password?</a>
+          </div>
+
+          <!-- Error Message -->
+          <div id="errorMessage" class="hidden bg-red-50 border border-red-200 text-red-600 text-xs rounded-xl p-4 flex items-start gap-2">
+            <i class="fas fa-exclamation-circle mt-0.5"></i>
+            <span id="errorText"></span>
+          </div>
+
+          <!-- Submit -->
+          <div class="input-group">
+            <button type="submit" id="loginBtn" class="login-btn disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2">
+              <span id="loginText">Sign In</span>
+              <i id="loginLoader" class="fas fa-spinner fa-spin hidden text-xs spinner"></i>
+            </button>
+          </div>
+        </form>
+
+        <!-- Security Note -->
+        <div class="mt-8 pt-6 border-t border-gray-100 flex items-center justify-center gap-2 text-xs text-gray-400">
+          <i class="fas fa-lock text-[10px]"></i>
+          <span>Protected by Firebase Authentication</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Forgot Password Modal -->
+  <div id="forgotPasswordModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-sm modal-overlay" id="forgotPasswordBackdrop"></div>
+    <div class="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 md:p-8 z-10 modal-content">
+      <button id="closeForgotPassword" class="absolute top-4 right-4 text-gray-400 hover:text-dark text-xl transition-colors" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+        <i class="fas fa-key text-primary"></i>
+      </div>
+      <h3 class="font-heading font-bold text-lg text-dark mb-2">Reset Password</h3>
+      <p class="text-dark/50 text-xs mb-4">Enter your admin email address to receive a password reset link.</p>
+      <input type="email" id="resetEmail" placeholder="Admin email address" class="input-field mb-3" style="padding-left: 16px;">
+      <div id="resetError" class="hidden bg-red-50 border border-red-200 text-red-600 text-xs rounded-xl p-3 mb-3"></div>
+      <button id="sendResetBtn" class="login-btn">
+        Send Reset Link
+      </button>
+    </div>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword, setPersistence, browserLocalPersistence, browserSessionPersistence, onAuthStateChanged, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+    import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyC7yFOjTI28Jx6V1w9TRt-hLRseHa_FI9A",
+      authDomain: "web-rtc-47862.firebaseapp.com",
+      databaseURL: "https://web-rtc-47862-default-rtdb.firebaseio.com",
+      projectId: "web-rtc-47862",
+      storageBucket: "web-rtc-47862.firebasestorage.app",
+      messagingSenderId: "503656932420",
+      appId: "1:503656932420:web:e102f05d9cf4d7e4e1c811"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getDatabase(app);
+
+    // Check if already authenticated - only redirect if on login page
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is authenticated, redirect to dashboard
+        // Dashboard page will handle admin verification
+        window.location.href = '/admin/dashboard.html';
+      }
+    });
+
+    const rememberedEmail = localStorage.getItem('rememberedAdminEmail');
+    if (rememberedEmail) {
+      document.getElementById('email').value = rememberedEmail;
+      document.getElementById('rememberMe').checked = true;
+    }
+
+    document.getElementById('togglePassword').addEventListener('click', function() {
+      const pw = document.getElementById('password');
+      const isPassword = pw.getAttribute('type') === 'password';
+      pw.setAttribute('type', isPassword ? 'text' : 'password');
+      this.innerHTML = isPassword ? '<i class="fas fa-eye-slash text-xs"></i>' : '<i class="fas fa-eye text-xs"></i>';
+    });
+
+    document.getElementById('forgotPasswordLink').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('forgotPasswordModal').classList.remove('hidden');
+      document.getElementById('forgotPasswordModal').classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    });
+
+    document.getElementById('closeForgotPassword').addEventListener('click', closeForgotPasswordModal);
+    document.getElementById('forgotPasswordBackdrop').addEventListener('click', closeForgotPasswordModal);
+
+    function closeForgotPasswordModal() {
+      document.getElementById('forgotPasswordModal').classList.add('hidden');
+      document.getElementById('forgotPasswordModal').classList.remove('flex');
+      document.body.style.overflow = '';
+      document.getElementById('resetEmail').value = '';
+      document.getElementById('resetError').classList.add('hidden');
+    }
+
+    async function verifyAdminEmail(email) {
+      try {
+        const adminsRef = ref(db, 'admins');
+        const snapshot = await get(adminsRef);
+        
+        if (snapshot.exists()) {
+          const admins = snapshot.val();
+          const adminEmails = Object.values(admins).map(admin => admin.email || admin.username || '');
+          return adminEmails.includes(email);
+        }
+        return false;
+      } catch (error) {
+        console.error('Error verifying admin:', error);
+        return false;
+      }
+    }
+
+    document.getElementById('sendResetBtn').addEventListener('click', async function() {
+      const email = document.getElementById('resetEmail').value.trim();
+      const resetError = document.getElementById('resetError');
+      
+      if (!email) {
+        resetError.textContent = 'Please enter your email address.';
+        resetError.classList.remove('hidden');
+        return;
+      }
+      
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        resetError.textContent = 'Please enter a valid email address.';
+        resetError.classList.remove('hidden');
+        return;
+      }
+      
+      this.disabled = true;
+      this.textContent = 'Verifying...';
+      resetError.classList.add('hidden');
+      
+      try {
+        const isAdmin = await verifyAdminEmail(email);
+        
+        if (!isAdmin) {
+          resetError.textContent = 'This email is not registered as an admin.';
+          resetError.classList.remove('hidden');
+          this.disabled = false;
+          this.textContent = 'Send Reset Link';
+          return;
+        }
+        
+        await sendPasswordResetEmail(auth, email);
+        
+        alert('Password reset link has been sent to your email.');
+        closeForgotPasswordModal();
+      } catch (err) {
+        console.error('Password reset error:', err);
+        resetError.textContent = 'Failed to send reset link. Please try again later.';
+        resetError.classList.remove('hidden');
+      } finally {
+        this.disabled = false;
+        this.textContent = 'Send Reset Link';
+      }
+    });
+
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const rememberMe = document.getElementById('rememberMe').checked;
+      const btn = document.getElementById('loginBtn');
+      const text = document.getElementById('loginText');
+      const loader = document.getElementById('loginLoader');
+      const errorEl = document.getElementById('errorMessage');
+      const errorText = document.getElementById('errorText');
+
+      if (!email || !password) return showError('Please fill in all fields.');
+      if (password.length < 8) return showError('Password must be at least 8 characters.');
+
+      btn.disabled = true;
+      text.textContent = 'Signing in...';
+      loader.classList.remove('hidden');
+      errorEl.classList.add('hidden');
+
+      try {
+        if (rememberMe) {
+          await setPersistence(auth, browserLocalPersistence);
+          localStorage.setItem('rememberedAdminEmail', email);
+        } else {
+          await setPersistence(auth, browserSessionPersistence);
+          localStorage.removeItem('rememberedAdminEmail');
+        }
+        
+        // Sign in user - no admin check here
+        // Admin verification happens in dashboard.html
+        await signInWithEmailAndPassword(auth, email, password);
+        
+        // Redirect to dashboard
+        // Dashboard will verify admin status and redirect to 403 if not admin
+        window.location.href = '/admin/dashboard.html';
+      } catch (err) {
+        const messages = {
+          'auth/invalid-email': 'Invalid email address.',
+          'auth/user-disabled': 'Account disabled. Contact administration.',
+          'auth/user-not-found': 'Invalid credentials.',
+          'auth/wrong-password': 'Invalid credentials.',
+          'auth/invalid-credential': 'Invalid email or password.',
+          'auth/too-many-requests': 'Too many attempts. Try again later.',
+          'auth/network-request-failed': 'Network error. Check your connection.'
+        };
+        showError(messages[err.code] || 'Unable to sign in. Try again.');
+        errorEl.classList.add('error-shake');
+        setTimeout(() => errorEl.classList.remove('error-shake'), 500);
+      } finally {
+        btn.disabled = false;
+        text.textContent = 'Sign In';
+        loader.classList.add('hidden');
+      }
+    });
+
+    function showError(msg) {
+      const errorEl = document.getElementById('errorMessage');
+      const errorText = document.getElementById('errorText');
+      errorText.textContent = msg;
+      errorEl.classList.remove('hidden');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeForgotPasswordModal();
+      }
+    });
+  </script>
+</body>
+</html>
